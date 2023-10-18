@@ -138,13 +138,28 @@
                                 <a href="#" class="sidebar-link">Thriller</a>
                             </li>
                         </ul>
-                    </li>        
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
+                            aria-expanded="false" aria-controls="auth">
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Auth
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Login</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Register</a>
+                            </li>
+                        </ul>
+                    </li>                    
                 </ul>
             </div>
         </aside>
         <!-- Main Component -->
         <div class="main">
-          <nav class="navbar navbar-expand px-3 border-bottom">
+            <nav class="navbar navbar-expand px-3 border-bottom">
                 <!-- Button for sidebar toggle -->
                 <button class="btn" type="button" data-bs-theme="dark">
                   <img src="./logo/hamburger.svg" alt="hamburger" width="35">
@@ -159,10 +174,6 @@
                         <i class="fas fa-search"></i>
                     </div>
                 </div>
-                <div class="login">                    	
-                  <a id="login-button" ms-hide-element="true" href="" class="button logout login w-button"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-          </div>
-                
             </div>
             </nav>  
 
@@ -181,8 +192,7 @@
     <section class="new-episodes" >
         <h2 id="home" class="color">New Episodes</h2>
         <div class="episodes" id="home">
-          <div class="trending">
-            <!-- <div class="box">
+            <div class="box">
               <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
               <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
               <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
@@ -195,20 +205,8 @@
               <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
               <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
               <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-            </div>  -->
-          </div>
-        </div>
-
-        <!-- Footer -->
-    <br>
-    <footer>
-        <div class="footer_logo">
-            <img src="./logo/aniflix_logo.png" alt="logo" width="150">
-            <div class="footer_text">Copyright  © 2023 | Aniflix.com
             </div> 
         </div>
-    </footer>
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

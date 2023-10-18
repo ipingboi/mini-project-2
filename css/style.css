@@ -7,7 +7,6 @@
 }
 
 :root {
-  --bs-border-color: #3299bb;
   --color-primary: #020d18;
 }
 
@@ -222,41 +221,6 @@ a.sidebar-link {
 	padding-right: 80px;
 }
 
-/* Login */
-
-a#login-button.button.logout.login.w-button {
-  background-color: #4a71d3;
-  background-image: none;
-  border-radius: 5px;
-  border-width: 0;
-  bottom: auto;
-  box-sizing: border-box;
-  color: #253858;
-  cursor: pointer;
-  display: block;
-  font-size: 16px;
-  left: auto;
-  letter-spacing: 1px;
-  line-height: 19px;
-  margin-left: -15px;
-  margin-right: 50px;
-  margin-top: 25px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: background-color 150ms;
-  color: #fff;
-  padding: 10px 20px;
-}
- 
-a#login-button.button.logout.login.w-button:hover {
-  background-color: #708fe4;
-  font-weight: 400;
-  outline: 0;
-}
-
 /* Popular */
 .main-container {
     padding: 50px;
@@ -289,10 +253,4 @@ a#login-button.button.logout.login.w-button:hover {
     .content {
         width: auto;
     }
-}
-
-/* Footer */
-
-footer {
-  text-align: center;
 }
