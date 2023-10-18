@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Aniflix</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>AniFlix</title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./CSS/style.css"
+    />
 
-<body>
+    <link
+      rel="stylesheet"
+      href="./lib/swiper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./lib/fontawesome.css"
+    />
+    <script src="./lib/swiper.js"></script>
+    <script
+      src="./JS/script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation -->
     <div class="wrapper">
         <!-- Sidebar -->
         <aside id="sidebar">
@@ -99,28 +138,13 @@
                                 <a href="#" class="sidebar-link">Thriller</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
-                            aria-expanded="false" aria-controls="auth">
-                            <i class="fa-regular fa-user pe-2"></i>
-                            Auth
-                        </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Login</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Register</a>
-                            </li>
-                        </ul>
-                    </li>                    
+                    </li>        
                 </ul>
             </div>
         </aside>
         <!-- Main Component -->
         <div class="main">
-            <nav class="navbar navbar-expand px-3 border-bottom">
+          <nav class="navbar navbar-expand px-3 border-bottom">
                 <!-- Button for sidebar toggle -->
                 <button class="btn" type="button" data-bs-theme="dark">
                   <img src="./logo/hamburger.svg" alt="hamburger" width="35">
@@ -135,40 +159,61 @@
                         <i class="fas fa-search"></i>
                     </div>
                 </div>
+                <div class="login">                    	
+                  <a id="login-button" ms-hide-element="true" href="" class="button logout login w-button"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          </div>
+                
             </div>
             </nav>  
-            <section class="now-playing">
-                <h2>Now Playing</h2>
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide">
-                      <a href="movie-details.html?id=1">
-                        <img
-                          src="./images/no-image.jpg"
-                          alt="Movie Title"
-                        />
-                      </a>
-                      <h4 class="swiper-rating">
-                        <i class="fas fa-star text-secondary"></i> 8 / 10
-                      </h4>
-                    </div> -->
-                  </div>
-                </div>
-              </section>
+
+    <!-- Trending Animes -->
+    <section class="trending-animes">
+      <h2 class="color">Trending Animes</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- <div class="swiper-slide"></div> -->
         </div>
-    </div>
+      </div>
+    </section>
 
-    
+    <!-- Episode -->
 
-   
+    <section class="new-episodes" >
+        <h2 id="home" class="color">New Episodes</h2>
+        <div class="episodes" id="home">
+          <div class="trending">
+            <!-- <div class="box">
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
+            </div>  -->
+          </div>
+        </div>
 
-    
-  
-</body>
+        <!-- Footer -->
+    <br>
+    <footer>
+        <div class="footer_logo">
+            <img src="./logo/aniflix_logo.png" alt="logo" width="150">
+            <div class="footer_text">Copyright  © 2023 | Aniflix.com
+            </div> 
+        </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
