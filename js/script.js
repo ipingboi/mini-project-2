@@ -59,7 +59,7 @@ const global = {
     });
   }
 
-  // Fetch trending anime
+  // Fetch new anime
 
   async function displayTrendingAnime() {
     const results = await fetchAPIData('trending/anime');
@@ -68,15 +68,15 @@ const global = {
   
     anime.forEach((anime) => {
       const div = document.createElement('div');
-      div.classList.add('.box');
+      div.classList.add('.slider-inner');
   
       div.innerHTML = `
-      <div class="box">
-      <a href=""><img src="${anime.attributes.posterImage.small}" alt=""></a>
-      </div>
-          `;
+      <div class="slider-inner__card">
+            <img class="slider-inner__img" src="${anime.attributes.posterImage.small}">
+          </div>`
   
-      document.querySelector('.episodes').appendChild(div)
+      document.querySelector('.slider-inner').appendChild(div);
+    
     });
   }
   
@@ -90,6 +90,27 @@ const global = {
   
     return data;
   }
+
+  // Fetch top anime
+
+  async function displayTopAnime() {
+    const results = await fetchAPIData('trending/anime');
+
+    const anime = results.data;
+  
+    anime.forEach((anime) => {
+      const div = document.createElement('div');
+      div.classList.add('.slider-inner');
+  
+      div.innerHTML = `
+      <div class="slider-inner__card">
+            <img class="slider-inner__img" src="${anime.attributes.posterImage.small}">
+          </div>`
+  
+      document.querySelector('.slider-inner').appendChild(div);
+    
+    });
+  }
   
   //Init
   function init() {
@@ -98,6 +119,7 @@ const global = {
       case '/index.html':
         displaySlider();
         displayTrendingAnime();
+        displayTopAnime();
         break;
     }
   }
@@ -109,3 +131,37 @@ toggler.addEventListener("click",function(){
 
   document.addEventListener('DOMContentLoaded', init);
   
+  // Arrows
+
+  document.addEventListener("click", e => {
+    let handle
+    if (e.target.matches(".slider-control")) {
+      handle = e.target
+    } else {
+      handle = e.target.closest(".slider-control")
+    }
+    if (handle != null) onHandleClick(handle)
+  })
+  
+  function onHandleClick(handle) {
+    const items = document.querySelectorAll('.slider-inner__card')
+    const maxItems = items.length
+    const itemsPerScreen = Math.ceil(maxItems / 4) - 1;
+  
+    const slider = handle.closest(".slider-wrap").querySelector(".slider-inner")
+    const sliderIndex = parseInt(
+      getComputedStyle(slider).getPropertyValue("--slider-index")
+    )
+  
+    if (handle.classList.contains("control-prev")) {
+      if (sliderIndex > 0){
+        slider.style.setProperty("--slider-index", sliderIndex - 1)
+      }
+    } else {
+      if (sliderIndex >= itemsPerScreen) {
+        slider.style.setProperty("--slider-index", 0)
+      } else {
+        slider.style.setProperty("--slider-index", sliderIndex + 1)
+      }
+    }
+  }

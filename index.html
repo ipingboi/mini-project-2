@@ -44,6 +44,7 @@
       rel="stylesheet"
       href="./lib/fontawesome.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="./lib/swiper.js"></script>
     <script
       src="./JS/script.js"
@@ -139,43 +140,32 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
-                            aria-expanded="false" aria-controls="auth">
-                            <i class="fa-regular fa-user pe-2"></i>
-                            Auth
-                        </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Login</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Register</a>
-                            </li>
-                        </ul>
                     </li>                    
                 </ul>
             </div>
         </aside>
         <!-- Main Component -->
         <div class="main">
-            <nav class="navbar navbar-expand px-3 border-bottom">
-                <!-- Button for sidebar toggle -->
-                <button class="btn" type="button" data-bs-theme="dark">
-                  <img src="./logo/hamburger.svg" alt="hamburger" width="35">
-                </button>
-                <div class="sidebar-logo">
-                  <a href="#"><img src="./logo/aniflix_logo.png" alt="" width="150"></a>
-              </div>
-              <div class="search_wrap search_wrap">
-                <div class="search_box">
-                    <input type="text" class="input" placeholder="Search...">
-                    <div class="btn btn_common">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
+          <nav class="navbar navbar-expand px-3 border-bottom">
+              <!-- Button for sidebar toggle -->
+              <button class="btn" type="button" data-bs-theme="dark">
+                <img src="./logo/hamburger.svg" alt="hamburger" width="35">
+              </button>
+              <div class="sidebar-logo">
+                <a href="./index.html"><img src="./logo/aniflix_logo.png" alt="" width="150"></a>
             </div>
-            </nav>  
+            <div class="search_wrap search_wrap">
+              <div class="search_box">
+                  <input type="text" class="input" placeholder="Search...">
+                  <div class="btn btn_common">
+                      <i class="fas fa-search"></i>
+                  </div>
+              </div>
+              <div class="login">                    	
+                      <a id="login-button" ms-hide-element="true" href="" class="button logout login w-button"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+              </div>
+          </div>
+          </nav>  
 
     <!-- Trending Animes -->
     <section class="trending-animes">
@@ -187,26 +177,56 @@
       </div>
     </section>
 
-    <!-- Episode -->
-
-    <section class="new-episodes" >
-        <h2 id="home" class="color">New Episodes</h2>
-        <div class="episodes" id="home">
-            <div class="box">
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-              <a href=""><img src="./logo/poster-not-available.jpg" alt=""></a>
-            </div> 
+    <!-- New Anime -->
+   
+    <div class="slider space">
+      <div class="slider-header">
+        <h2 class="color text-center">New Anime</h2>
+      </div>
+      <div class="slider-wrap">
+        <button class="slider-control control-prev">
+          <div class="control-icon"><i class="fa-solid fa-chevron-left"></i></div>
+        </button>
+        <div class="slider-inner">
+          <div class="slider-inner__card">
+            <!-- <img class="slider-inner__img" src="${anime.attributes.posterImage.small}"> -->
+          </div>
+          
         </div>
+        <button class="slider-control control-next">
+          <div class="control-icon"><i class="fa-solid fa-chevron-right"></i></div>
+        </button>
+      </div>
+    </div>
+
+    
+    <!-- TOp Anime -->
+    
+      <div class="slider-header">
+        <h2 class="color text-center">Top Anime</h2>
+      </div>
+      <div class="slider-wrap">
+        <button class="slider-control control-prev">
+          <div class="control-icon"><i class="fa-solid fa-chevron-left"></i></div>
+        </button>
+        <div class="slider-inner">
+          
+        </div>
+        <button class="slider-control control-next">
+          <div class="control-icon"><i class="fa-solid fa-chevron-right"></i></div>
+        </button>
+      </div>
+    
+
+        <br>
+        <footer>
+            <div class="footer_logo">
+                <img src="./logo/aniflix_logo.png" alt="logo" width="150">
+                <div class="footer_text">Copyright  © 2023 | Aniflix.com
+                </div> 
+            </div>
+        </footer>   
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
