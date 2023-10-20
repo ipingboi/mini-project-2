@@ -93,24 +93,7 @@ const global = {
 
   // Fetch top anime
 
-  async function displayTopAnime() {
-    const results = await fetchAPIData('trending/anime');
-
-    const anime = results.data;
   
-    anime.forEach((anime) => {
-      const div = document.createElement('div');
-      div.classList.add('.slider-inner');
-  
-      div.innerHTML = `
-      <div class="slider-inner__card">
-            <img class="slider-inner__img" src="${anime.attributes.posterImage.small}">
-          </div>`
-  
-      document.querySelector('.slider-inner').appendChild(div);
-    
-    });
-  }
   
   //Init
   function init() {
