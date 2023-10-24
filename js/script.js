@@ -153,7 +153,7 @@ toggler.addEventListener("click",function(){
 
   // Search
 
-  const anime = document.getElementById('input');
+  const inputElement = document.getElementById('input');
   const buttonElement = document.getElementById('search-button');
   const animeWrapper = document.getElementById('anime-wrapper');
   const pageFound = document.getElementById('page-found');
@@ -164,7 +164,7 @@ toggler.addEventListener("click",function(){
     animeCalling();
   })
   
-  anime.addEventListener("keyup", function(event) {
+  inputElement.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
       animeCalling();
     }
@@ -175,16 +175,17 @@ toggler.addEventListener("click",function(){
     animeWrapper.innerHTML = " ";
     pageFound.innerHTML=" ";
    
-    fetch(`https://api.jikan.moe/v4/anime`)
+    fetch(`https://www.omdbapi.com/?apikey=c951ff1&s=${inputElement.value}`)
     .then(response => response.json())
     .then(json => {
-      if(anime.value !== ""){
+      if(inputElement.value !== ""){
   
       loaderElement.innerHTML = "";   
-      anime.value = "";
+      inputElement.value = "";
          
       console.log(json);
       if(json.Response == "True"){
+     
      
         let result = json.Search;
         console.log(result);
@@ -193,10 +194,10 @@ toggler.addEventListener("click",function(){
         console.log(result[i]);
 
         animeWrapper.innerHTML += `<div class="anime-card">
-        <img class="anime-image" src="${data.images.jpg.large_image_url}"/>
+        <img class="anime-image" src="${result[i].Poster}"/>
         <div class="anime-info">
-            <h4 class="anime-name"> Anime : ${data.titles.title}</h4>
-            <h5 class="anime-brand"> Year : ${data.year}</h5>
+            <h4 class="anime-name"> Anime : ${result[i].Title}</h4>
+            <h5 class="anime-year"> Year : ${result[i].Year}</h5>
         </div>
     </div>`  
         }
